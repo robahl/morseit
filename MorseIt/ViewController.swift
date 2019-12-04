@@ -15,6 +15,12 @@ class ViewController: UIViewController {
     // Do any additional setup after loading the view.
   }
 
-
+  @IBAction func signalTouchedDown(_ sender: Any) {
+    print("Down")
+  }
+  
+  @IBAction func signalTouchedUp(_ sender: Any) {
+    print("Up")
+  }
 }
 
