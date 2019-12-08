@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
   
+  var player: AVAudioPlayer?
   var morseSequence = [String]()
   var signalDownTime: TimeInterval = 0.0
   var signalUpTime: TimeInterval = 0.0
@@ -44,8 +46,26 @@ class ViewController: UIViewController {
     "--..": "Z"
   ]
   @IBOutlet weak var messageLabel: UILabel!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    // Initialize audio player
+    guard let url = Bundle.main.url(forResource: "beep", withExtension: "wav") else { return }
+    
+    do {
+      try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+      try AVAudioSession.sharedInstance().setActive(true)
+      
+      player = try AVAudioPlayer(contentsOf: url)
+      
+    } catch let error {
+      print(error.localizedDescription)
+    }
+  }
 
   @IBAction func signalTouchedDown(_ sender: Any) {
+    player?.play()
     signalDownTime = Date().timeIntervalSince1970
     if (signalDownTime - signalUpTime) > (dotDuration * 5) {
       morseSequence.append(" ")
@@ -53,6 +73,7 @@ class ViewController: UIViewController {
   }
   
   @IBAction func signalTouchedUp(_ sender: Any) {
+    player?.stop()
     signalUpTime = Date().timeIntervalSince1970
     let duration = signalUpTime - signalDownTime
     morseSequence.append(morseSignal(duration))

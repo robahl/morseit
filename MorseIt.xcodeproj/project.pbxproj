@@ -13,6 +13,7 @@
 		B22F95BE239721A0004CB51A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B22F95BC239721A0004CB51A /* Main.storyboard */; };
 		B22F95C0239721A0004CB51A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22F95BF239721A0004CB51A /* Assets.xcassets */; };
 		B22F95C3239721A0004CB51A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B22F95C1239721A0004CB51A /* LaunchScreen.storyboard */; };
+		B22F95CB239C7675004CB51A /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = B22F95CA239C7675004CB51A /* beep.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B22F95BF239721A0004CB51A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B22F95C2239721A0004CB51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B22F95C4239721A0004CB51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B22F95CA239C7675004CB51A /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beep.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				B22F95BC239721A0004CB51A /* Main.storyboard */,
 				B22F95BF239721A0004CB51A /* Assets.xcassets */,
 				B22F95C1239721A0004CB51A /* LaunchScreen.storyboard */,
+				B22F95CA239C7675004CB51A /* beep.wav */,
 				B22F95C4239721A0004CB51A /* Info.plist */,
 			);
 			path = MorseIt;
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B22F95CB239C7675004CB51A /* beep.wav in Resources */,
 				B22F95C3239721A0004CB51A /* LaunchScreen.storyboard in Resources */,
 				B22F95C0239721A0004CB51A /* Assets.xcassets in Resources */,
 				B22F95BE239721A0004CB51A /* Main.storyboard in Resources */,
