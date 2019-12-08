@@ -15,7 +15,7 @@ class ViewController: UIViewController {
   var morseSequence = [String]()
   var signalDownTime: TimeInterval = 0.0
   var signalUpTime: TimeInterval = 0.0
-  let dotDuration = 0.12 // 150 ms
+  let dotDuration = 0.08 // 80 ms
   
   let morseCodes = [
     ".-": "A",
@@ -62,6 +62,7 @@ class ViewController: UIViewController {
   }
   
   @IBAction func signalTouchedDown(_ sender: Any) {
+    player?.currentTime = 0
     player?.play()
     signalDownTime = Date().timeIntervalSince1970
     if (signalDownTime - signalUpTime) > (dotDuration * 5) {
@@ -78,7 +79,8 @@ class ViewController: UIViewController {
     let duration = signalUpTime - signalDownTime
     morseSequence.append(morseSignal(duration))
     
-    messageLabel.text = morseSequenceToAlpha(morseSequence)
+    let message = morseSequenceToAlpha(morseSequence)
+    messageLabel.text = message
   }
   
   
