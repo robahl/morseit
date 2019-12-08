@@ -21,6 +21,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Signal"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signalTouchedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="mQf-Ol-tqH"/>
                                     <action selector="signalTouchedUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eb2-Rp-hRq"/>
@@ -44,6 +49,13 @@
                                     <action selector="clearMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ht3-B6-Npm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7u-hk-WbB">
+                                <rect key="frame" x="20" y="56" width="70" height="30"/>
+                                <state key="normal" title="Reference"/>
+                                <connections>
+                                    <segue destination="OeC-8c-aGR" kind="presentation" id="Pme-vv-Nro"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -54,9 +66,11 @@
                             <constraint firstItem="nZT-rk-KBv" firstAttribute="top" secondItem="NIk-x4-u0w" secondAttribute="bottom" constant="76" id="Jp2-oY-wND"/>
                             <constraint firstItem="2TE-6H-Ygm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YnB-XL-3hs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nZT-rk-KBv" secondAttribute="trailing" constant="20" id="c5x-gi-keq"/>
+                            <constraint firstItem="H7u-hk-WbB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cuL-wL-s77"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NIk-x4-u0w" secondAttribute="bottom" constant="299" id="g4Z-gC-yKB"/>
                             <constraint firstItem="nZT-rk-KBv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gaR-5f-k8K"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2TE-6H-Ygm" secondAttribute="trailing" constant="20" id="hg1-OH-nif"/>
+                            <constraint firstItem="H7u-hk-WbB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="iiw-CA-LMu"/>
                             <constraint firstItem="2TE-6H-Ygm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ivI-ny-21R"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NIk-x4-u0w" secondAttribute="trailing" constant="81" id="jvA-VJ-GBZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2TE-6H-Ygm" secondAttribute="trailing" constant="20" id="khk-gJ-mF4"/>
@@ -70,6 +84,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="G1P-za-old">
+            <objects>
+                <viewController id="OeC-8c-aGR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cCx-Hm-9t7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="hOm-Gy-eNa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fjD-XZ-cge" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="859" y="138"/>
         </scene>
     </scenes>
     <resources>
