@@ -50,20 +50,17 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // Initialize audio player
     guard let url = Bundle.main.url(forResource: "beep", withExtension: "wav") else { return }
     
     do {
-      try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
-      try AVAudioSession.sharedInstance().setActive(true)
-      
-      player = try AVAudioPlayer(contentsOf: url)
-      
-    } catch let error {
-      print(error.localizedDescription)
+      player = try AVAudioPlayer.init(contentsOf: url)
+      player?.prepareToPlay()
+    } catch {
+      print("Could not load file")
     }
+    
   }
-
+  
   @IBAction func signalTouchedDown(_ sender: Any) {
     player?.play()
     signalDownTime = Date().timeIntervalSince1970
@@ -73,7 +70,10 @@ class ViewController: UIViewController {
   }
   
   @IBAction func signalTouchedUp(_ sender: Any) {
-    player?.stop()
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.03, execute: {
+      self.player?.stop()
+    })
+    
     signalUpTime = Date().timeIntervalSince1970
     let duration = signalUpTime - signalDownTime
     morseSequence.append(morseSignal(duration))
