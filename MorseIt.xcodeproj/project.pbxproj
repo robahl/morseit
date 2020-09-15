@@ -14,6 +14,7 @@
 		B22F95C0239721A0004CB51A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22F95BF239721A0004CB51A /* Assets.xcassets */; };
 		B22F95C3239721A0004CB51A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B22F95C1239721A0004CB51A /* LaunchScreen.storyboard */; };
 		B22F95CB239C7675004CB51A /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = B22F95CA239C7675004CB51A /* beep.wav */; };
+		B22F95D1239D14E0004CB51A /* MorseReferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22F95D0239D14E0004CB51A /* MorseReferenceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B22F95C2239721A0004CB51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B22F95C4239721A0004CB51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B22F95CA239C7675004CB51A /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beep.wav; sourceTree = "<group>"; };
+		B22F95D0239D14E0004CB51A /* MorseReferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseReferenceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				B22F95B8239721A0004CB51A /* SceneDelegate.swift */,
 				B22F95BA239721A0004CB51A /* ViewController.swift */,
 				B22F95BC239721A0004CB51A /* Main.storyboard */,
+				B22F95D0239D14E0004CB51A /* MorseReferenceViewController.swift */,
 				B22F95BF239721A0004CB51A /* Assets.xcassets */,
 				B22F95C1239721A0004CB51A /* LaunchScreen.storyboard */,
 				B22F95CA239C7675004CB51A /* beep.wav */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B22F95BB239721A0004CB51A /* ViewController.swift in Sources */,
+				B22F95D1239D14E0004CB51A /* MorseReferenceViewController.swift in Sources */,
 				B22F95B7239721A0004CB51A /* AppDelegate.swift in Sources */,
 				B22F95B9239721A0004CB51A /* SceneDelegate.swift in Sources */,
 			);

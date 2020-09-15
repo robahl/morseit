@@ -45,6 +45,7 @@ class ViewController: UIViewController {
     "-.--": "Y",
     "--..": "Z"
   ]
+  
   @IBOutlet weak var messageLabel: UILabel!
   
   override func viewDidLoad() {
@@ -59,6 +60,13 @@ class ViewController: UIViewController {
       print("Could not load file")
     }
     
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.destination is MorseReferenceViewController {
+      let vc = segue.destination as? MorseReferenceViewController
+      vc?.morseCodes = morseCodes
+    }
   }
   
   @IBAction func signalTouchedDown(_ sender: Any) {
